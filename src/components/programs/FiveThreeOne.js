@@ -48,7 +48,7 @@ function saveToAccount(){
     alert("works as well");
 }
 
-export default function FiveThreeOne(){
+export default function FiveThreeOne(props){
     const classes = useStyles();
 
     const [benchOneRepMax,setBenchOneRepMax] = useState(0);
@@ -77,6 +77,17 @@ export default function FiveThreeOne(){
             setBenchOneRepMax(data.get('benchRepMax'));
             setDeadliftOneRepMax(data.get('deadliftRepMax'));
             setOverheadPressOneRepMax(data.get('overheadPressRepMax'));
+        }
+    }
+
+
+
+    if(props.userId!=null){
+        if(props.userData.programs.fiveThreeOne.hasStarted == true){ //todo this requires a better condition
+            setSquatOneRepMax(props.userData.programs.fiveThreeOne.squat);
+            setBenchOneRepMax(props.userData.programs.fiveThreeOne.bench);
+            setOverheadPressOneRepMax(props.userData.programs.fiveThreeOne.overheadPress);
+            setDeadliftOneRepMax(props.userData.programs.fiveThreeOne.deadlift);
         }
     }
 

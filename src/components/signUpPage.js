@@ -61,7 +61,27 @@ export default function SignUpPage(props) {
     var setNewEmail = (event) => { setEmail(event.target.value); };
     var setNewPassword = (event) => { setPassword(event.target.value); };
 
-    props.dataCallback();
+    function logUserOut(event){
+        props.logOutUser();
+    }
+    if(props.userId!=null){
+        return (
+            <div>
+                <h1>You are already signed in!. </h1>
+                <h1>Would you like to sign out?</h1>
+                <Button
+                    onClick={logUserOut}
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    color="primary"
+                >
+                    Sign Out
+                </Button>
+            </div>
+        )
+    }
+
 
     return (
         <Container component="main" maxWidth="xs">

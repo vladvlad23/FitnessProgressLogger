@@ -54,13 +54,42 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
+
+
 export default function LogInPage(props) {
     const classes = useStyles();
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
 
+    function submitData(event) {
+        event.preventDefault();
+        props.dataCallback(email,password);
+    }
+
+    function logUserOut(event){
+        props.logOutUser();
+    }
+
     var setNewEmail = (event) => { setEmail(event.target.value); };
     var setNewPassword = (event) => { setPassword(event.target.value); };
+
+    if(props.userId!=null){
+        return (
+            <div>
+                <h1>You are already signed in!. </h1>
+                <h1>Would you like to sign out?</h1>
+                <Button
+                    onClick={logUserOut}
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    color="primary"
+                >
+                    Sign Out
+                </Button>
+            </div>
+        )
+    }
 
     return (
         <Container component="main" maxWidth="xs">
@@ -102,7 +131,7 @@ export default function LogInPage(props) {
                         label="Remember me"
                     />
                     <Button
-                        onClick={()=>{ props.dataCallback(email,password)}}
+                        onClick={ submitData }
                         type="submit"
                         fullWidth
                         variant="contained"

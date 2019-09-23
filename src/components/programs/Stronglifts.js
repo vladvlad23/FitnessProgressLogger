@@ -38,7 +38,6 @@ const useStyles = makeStyles( theme =>({
 
 export default function Stronglifts(){
     const classes = useStyles();
-    const [anchorEl, setAnchorEl] = React.useState(null);
     const [benchMax,setBenchMax] = useState(0);
     const [squatMax,setSquatMax] = useState(0);
     const [overheadPressMax,setOverheadPressMax] = useState(0);
@@ -60,6 +59,7 @@ export default function Stronglifts(){
             setBenchMax(data.get('benchMax'));
             setDeadliftMax(data.get('deadliftMax'));
             setOverheadPressMax(data.get('overheadPressMax'));
+            setRowMax(data.get('rowMax'));
         }
 
     }

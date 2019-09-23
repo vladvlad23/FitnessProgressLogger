@@ -11,24 +11,30 @@ import SignUpPage from "./components/signUpPage";
 import DonationPage from "./components/donationPage";
 import {makeStyles} from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import firebase from 'firebase'
 import FiveThreeOne from "./components/programs/FiveThreeOne";
 import ContactPage from "./components/contactPage"
 import Stronglifts from "./components/programs/Stronglifts"
+
+var firebase = require("firebase/app");
+require("firebase/auth");
+require("firebase/firestore");
+require("firebase/database");
 
 var firebaseConfig = {
     apiKey: "AIzaSyDWoxWpt28tk0DwkTEVyMy4RlJANOZXpoc",
     authDomain: "fitness-program-logger.firebaseapp.com",
     databaseURL: "https://fitness-program-logger.firebaseio.com",
     projectId: "fitness-program-logger",
-    storageBucket: "",
+    storageBucket: "fitness-program-logger.appspot.com",
     messagingSenderId: "919970343116",
     appId: "1:919970343116:web:0b3c2cddab045512"
 };
+
+var userId=null;
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-
+var userData = null
 
 
 function MadeWithLove() {
@@ -93,25 +99,64 @@ const useStyles = makeStyles(theme => ({
 
 function receiveDataForSignUp(email,password){
     if(email && password) {
-        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+        console.log("Received data for sign up");
+
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+            .catch(function (error) {
             console.log(error.code);
             console.log(error.message);
         });
     }
+
 }
 
 function receiveDataForLogIn(email,password){
-    if(email && password){
-        firebase.auth().signInWithEmailAndPassword(email,password).catch((error)=>{
-            console.log(error.code);
-            console.log(error.message);
-        })
+    if(email && password) {
+        console.log("Data received for log in " + email + " " + password );
+
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(function(user){
+                alert("Logged in sucesfully");
+            })
+            .catch((error) => {
+                console.log(error.code);
+                console.log(error.message);
+                console.log("Ya ba da ba doo")
+            });
     }
 
 }
 
+function logOutUser(){
+    firebase.auth().signOut();
+    userId=null;
+    alert("Logged out sucessfuly");
+}
+
+
+
+function updateUser() {
+
+    return firebase.auth().onAuthStateChanged(function (user) {
+        if (user) { //user signed in
+            userId = user.uid;
+            console.log("User signed in" + userId);
+            firebase.database().ref('users/' + userId).once("value").then(function(snapshot) {
+                console.log(snapshot.val());
+            }, function(errorObject){
+                console.log("read failed" + errorObject.code);
+            });
+            //todo add userData here
+        } else {
+            console.log("User not signed in");
+        }
+    });
+}
+
 function App() {
     const classes = useStyles();
+
+    var listener = updateUser();
 
     return (
         <BrowserRouter>
@@ -142,10 +187,10 @@ function App() {
                 <main>
                     <Switch>
                             <Route exact path="/" component={HomePage}/>
-                            <Route path="/logIn/" render={ (props) => <LogInPage dataCallback={receiveDataForLogIn} /> }/>
-                            <Route path="/signUp/" render={ (props) => <SignUpPage dataCallback={receiveDataForSignUp} /> } />
+                            <Route path="/logIn/" render={ (props) => <LogInPage logOutUser={logOutUser} userId={userId} dataCallback={receiveDataForLogIn} /> }/>
+                            <Route path="/signUp/" render={ (props) => <SignUpPage logOutUser={logOutUser} userId={userId} dataCallback={receiveDataForSignUp} /> } />
                             <Route path="/donationPage/" component={DonationPage}/>
-                            <Route path="/531program/" component={FiveThreeOne}/>
+                            <Route path="/531program/" render={(props) => <FiveThreeOne userData={userData} userId={userId} /> } />
                             <Route path="/stronglifts/" component={Stronglifts} />
                             <Route path="/contactPage/" component={ContactPage} />
                     </Switch>
