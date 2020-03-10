@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.692d75bb.chunk.css",
-    "main.js": "/static/js/main.9ba7e658.chunk.js",
-    "main.js.map": "/static/js/main.9ba7e658.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.019831ba.chunk.js": "/static/js/2.019831ba.chunk.js",
-    "static/js/2.019831ba.chunk.js.map": "/static/js/2.019831ba.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.3a1cbce8cb6b778bf120dec14b838a6d.js": "/precache-manifest.3a1cbce8cb6b778bf120dec14b838a6d.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.692d75bb.chunk.css.map": "/static/css/main.692d75bb.chunk.css.map",
-    "static/media/deadlifting.jpg": "/static/media/deadlifting.d9853974.jpg",
-    "static/media/githubIcon.svg": "/static/media/githubIcon.3faa99e4.svg",
-    "static/media/overheadpressing.jpg": "/static/media/overheadpressing.7013e133.jpg"
+    "main.css": "/FitnessProgressLogger/static/css/main.692d75bb.chunk.css",
+    "main.js": "/FitnessProgressLogger/static/js/main.121e1b75.chunk.js",
+    "main.js.map": "/FitnessProgressLogger/static/js/main.121e1b75.chunk.js.map",
+    "runtime~main.js": "/FitnessProgressLogger/static/js/runtime~main.1492c6e5.js",
+    "runtime~main.js.map": "/FitnessProgressLogger/static/js/runtime~main.1492c6e5.js.map",
+    "static/js/2.69fb6c90.chunk.js": "/FitnessProgressLogger/static/js/2.69fb6c90.chunk.js",
+    "static/js/2.69fb6c90.chunk.js.map": "/FitnessProgressLogger/static/js/2.69fb6c90.chunk.js.map",
+    "index.html": "/FitnessProgressLogger/index.html",
+    "precache-manifest.d4af0250d68424a13cb5dfdba53d9a39.js": "/FitnessProgressLogger/precache-manifest.d4af0250d68424a13cb5dfdba53d9a39.js",
+    "service-worker.js": "/FitnessProgressLogger/service-worker.js",
+    "static/css/main.692d75bb.chunk.css.map": "/FitnessProgressLogger/static/css/main.692d75bb.chunk.css.map",
+    "static/media/deadlifting.jpg": "/FitnessProgressLogger/static/media/deadlifting.d9853974.jpg",
+    "static/media/githubIcon.svg": "/FitnessProgressLogger/static/media/githubIcon.3faa99e4.svg",
+    "static/media/overheadpressing.jpg": "/FitnessProgressLogger/static/media/overheadpressing.7013e133.jpg"
   }
 }
