@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/vladvlad23/FitnessProgressLogger/static/css/main.692d75bb.chunk.css",
+    "main.js": "/vladvlad23/FitnessProgressLogger/static/js/main.f38920aa.chunk.js",
+    "main.js.map": "/vladvlad23/FitnessProgressLogger/static/js/main.f38920aa.chunk.js.map",
+    "runtime~main.js": "/vladvlad23/FitnessProgressLogger/static/js/runtime~main.141c24fb.js",
+    "runtime~main.js.map": "/vladvlad23/FitnessProgressLogger/static/js/runtime~main.141c24fb.js.map",
+    "static/js/2.53b2ac2e.chunk.js": "/vladvlad23/FitnessProgressLogger/static/js/2.53b2ac2e.chunk.js",
+    "static/js/2.53b2ac2e.chunk.js.map": "/vladvlad23/FitnessProgressLogger/static/js/2.53b2ac2e.chunk.js.map",
+    "index.html": "/vladvlad23/FitnessProgressLogger/index.html",
+    "precache-manifest.1ef3dceeafe0c02164b426a0d6f52513.js": "/vladvlad23/FitnessProgressLogger/precache-manifest.1ef3dceeafe0c02164b426a0d6f52513.js",
+    "service-worker.js": "/vladvlad23/FitnessProgressLogger/service-worker.js",
+    "static/css/main.692d75bb.chunk.css.map": "/vladvlad23/FitnessProgressLogger/static/css/main.692d75bb.chunk.css.map",
+    "static/media/deadlifting.jpg": "/vladvlad23/FitnessProgressLogger/static/media/deadlifting.d9853974.jpg",
+    "static/media/githubIcon.svg": "/vladvlad23/FitnessProgressLogger/static/media/githubIcon.3faa99e4.svg",
+    "static/media/overheadpressing.jpg": "/vladvlad23/FitnessProgressLogger/static/media/overheadpressing.7013e133.jpg"
+  }
+}
