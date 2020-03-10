@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/FitnessProgressLogger/static/css/main.692d75bb.chunk.css",
-    "main.js": "/FitnessProgressLogger/static/js/main.121e1b75.chunk.js",
-    "main.js.map": "/FitnessProgressLogger/static/js/main.121e1b75.chunk.js.map",
+    "main.js": "/FitnessProgressLogger/static/js/main.f5483b08.chunk.js",
+    "main.js.map": "/FitnessProgressLogger/static/js/main.f5483b08.chunk.js.map",
     "runtime~main.js": "/FitnessProgressLogger/static/js/runtime~main.1492c6e5.js",
     "runtime~main.js.map": "/FitnessProgressLogger/static/js/runtime~main.1492c6e5.js.map",
     "static/js/2.69fb6c90.chunk.js": "/FitnessProgressLogger/static/js/2.69fb6c90.chunk.js",
     "static/js/2.69fb6c90.chunk.js.map": "/FitnessProgressLogger/static/js/2.69fb6c90.chunk.js.map",
     "index.html": "/FitnessProgressLogger/index.html",
-    "precache-manifest.d4af0250d68424a13cb5dfdba53d9a39.js": "/FitnessProgressLogger/precache-manifest.d4af0250d68424a13cb5dfdba53d9a39.js",
+    "precache-manifest.ab37054e936b044fedfdc1de8ce7e428.js": "/FitnessProgressLogger/precache-manifest.ab37054e936b044fedfdc1de8ce7e428.js",
     "service-worker.js": "/FitnessProgressLogger/service-worker.js",
     "static/css/main.692d75bb.chunk.css.map": "/FitnessProgressLogger/static/css/main.692d75bb.chunk.css.map",
     "static/media/deadlifting.jpg": "/FitnessProgressLogger/static/media/deadlifting.d9853974.jpg",
