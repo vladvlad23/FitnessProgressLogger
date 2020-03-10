@@ -159,7 +159,7 @@ function App() {
     var listener = updateUser();
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={window.location.pathname || ''}>
             <React.Fragment>
                 <CssBaseline />
                 <AppBar position="relative">
