@@ -21,13 +21,13 @@ require("firebase/firestore");
 require("firebase/database");
 
 var firebaseConfig = {
-    apiKey: "AIzaSyDWoxWpt28tk0DwkTEVyMy4RlJANOZXpoc",
+    apiKey: "", //REMOVED KEY FOR SECURITY
     authDomain: "fitness-program-logger.firebaseapp.com",
     databaseURL: "https://fitness-program-logger.firebaseio.com",
     projectId: "fitness-program-logger",
     storageBucket: "fitness-program-logger.appspot.com",
-    messagingSenderId: "919970343116",
-    appId: "1:919970343116:web:0b3c2cddab045512"
+    messagingSenderId: "",
+    appId: "" //Removed for security
 };
 
 var userId=null;
