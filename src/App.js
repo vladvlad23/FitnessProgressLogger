@@ -159,7 +159,7 @@ function App() {
     var listener = updateUser();
 
     return (
-        <BrowserRouter basename={window.location.pathname || ''}>
+        <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
             <React.Fragment>
                 <CssBaseline />
                 <AppBar position="relative">
