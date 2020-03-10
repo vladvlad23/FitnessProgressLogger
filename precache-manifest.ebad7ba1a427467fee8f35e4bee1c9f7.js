@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8d40dd8d5f492327520ab484028d35b3",
+    "revision": "8b4e958430dfdcab21bcdac2cb2d03bd",
     "url": "/FitnessProgressLogger/index.html"
   },
   {
-    "revision": "c70d528a417b227ec757",
+    "revision": "d475ae417443174dfcff",
     "url": "/FitnessProgressLogger/static/css/main.692d75bb.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/FitnessProgressLogger/static/js/2.69fb6c90.chunk.js"
   },
   {
-    "revision": "c70d528a417b227ec757",
-    "url": "/FitnessProgressLogger/static/js/main.f5483b08.chunk.js"
+    "revision": "d475ae417443174dfcff",
+    "url": "/FitnessProgressLogger/static/js/main.4ae10361.chunk.js"
   },
   {
     "revision": "ce97f2b23aba9f96f35f",
